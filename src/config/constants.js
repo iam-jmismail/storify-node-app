@@ -17,6 +17,10 @@ const CONFIG = {
   JWT_SECRET_KEY:
     process.env.JWT_SECRET_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
   BCRYPT_SALT_ROUNDS: 10,
+  AWS_S3_BUCKET_NAME: process.env.AWS_S3_BUCKET_NAME || "storify-bucket",
+  AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID || "",
+  AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY || "",
+  AWS_S3_BUCKET_REGION: process.env.AWS_S3_BUCKET_REGION || "ap-south-1",
 };
 
 module.exports = {

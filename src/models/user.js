@@ -34,8 +34,24 @@ const UserSchema = new Schema({
   updated_at: Date,
   batch_count: {
     type: Number,
+    default: 1,
+    required: true,
+  },
+  item_count: {
+    type: Number,
     default: 0,
     required: true,
+  },
+  is_deleted: {
+    type: Boolean,
+    default: false,
+    required: true,
+  },
+  subscription: {
+    type: String,
+    enum: ["BASIC", "SILVER", "GOLD", "PALTINUM"],
+    required: true,
+    default: "BASIC",
   },
 });
 

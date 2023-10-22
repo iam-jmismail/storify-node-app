@@ -1,0 +1,17 @@
+const SUBSCRIPTIONS = {
+  BASIC: 5,
+  SILVER: 25,
+  GOLD: 50,
+  PALTINUM: 100,
+};
+const ITEMS_SUBSCRIPTIONS = {
+  BASIC: 5,
+  SILVER: 25,
+  GOLD: 50,
+  PALTINUM: 100,
+};
+
+module.exports = {
+  SUBSCRIPTIONS,
+  ITEMS_SUBSCRIPTIONS,
+};
