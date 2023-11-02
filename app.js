@@ -8,6 +8,7 @@ require("./src/lib/mongoose");
 const appRoutes = require("./src/routes");
 const { errorHandler } = require("./src/helpers/error-handler");
 const responseHandler = require("./src/helpers/response-handler");
+const assetController = require("./src/controllers/asset");
 
 const PORT = process.env.PORT || 5000;
 
@@ -19,6 +20,7 @@ app.use(responseHandler);
 
 // Routes
 app.use("/api", appRoutes);
+app.use("/web/:key_name", assetController.getWebAsset);
 
 app.listen(PORT, () => {
   console.log("App is listening on port " + PORT);
